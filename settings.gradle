@@ -1,0 +1,3 @@
+include ':lib_detekt_rules'
+include ':app'
+rootProject.name = "CustomLintRuleHomework"
