@@ -16,6 +16,8 @@ class RedundantWhenExpression(config: Config = Config.empty) : Rule(config) {
     override fun visitWhenExpression(expression: KtWhenExpression) {
         super.visitWhenExpression(expression)
 
+        expression.subjectExpression ?: return
+
         val elseText = expression.elseExpression?.text ?: return
         val entryWithSameText = expression.entries
             .firstOrNull { !it.isElse && it.expression?.text == elseText }

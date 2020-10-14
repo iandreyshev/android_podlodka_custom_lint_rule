@@ -72,4 +72,20 @@ class RedundantWhenExpressionRuleTest : FreeSpec({
         rule.lint(code).shouldNotBeEmpty()
     }
 
+    "Should not lint when-expression without subject" {
+        @Language("kt")
+        val code = """
+            fun main() {
+                when {
+                    Progress.NOT_STARTED -> "NOT_STARTED"
+                    Progress.IN_PROGRESS -> "NOT_STARTED"
+                    Progress.COMPLETED -> "COMPLETED"
+                    else -> "ELSE"
+                }
+            }
+        """.trimIndent()
+
+        rule.lint(code).shouldBeEmpty()
+    }
+
 })
