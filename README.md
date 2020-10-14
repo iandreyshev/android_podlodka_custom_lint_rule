@@ -1,4 +1,4 @@
-# Homework for custom lint rules event
+# RedundantWhenExpression rule for detekt
 
 Правило, которое определяет, что ветка внутри when-expression может быть удалена т.к. существует ветка else с точно таким же выражением.
 
