@@ -38,6 +38,10 @@ output-reports:
   # - 'XmlOutputReport'
   # - 'HtmlOutputReport'
 
+customs:
+  RedundantWhenExpression:
+    active: true
+
 comments:
   active: true
   excludes: ['**/test/**', '**/androidTest/**', '**/commonTest/**', '**/jvmTest/**', '**/jsTest/**', '**/iosTest/**']
@@ -61,10 +65,6 @@ comments:
     active: false
   UndocumentedPublicProperty:
     active: false
-
-iandreyshev_rule_set:
-  FixedBooleanPrefixesRule:
-    active: true
 
 complexity:
   active: true
