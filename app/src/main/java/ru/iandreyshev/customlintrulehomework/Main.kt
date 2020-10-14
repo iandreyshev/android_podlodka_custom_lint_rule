@@ -12,7 +12,7 @@ fun main(args: Array<String>) {
 
     when (progress) {
         Progress.NOT_STARTED -> "NOT_STARTED"
-        Progress.IN_PROGRESS -> "NOT_STARTED"
+        Progress.IN_PROGRESS -> "IN_PROGRESS"
         Progress.COMPLETED -> "COMPLETED"
         else -> "NOT_STARTED"
     }
